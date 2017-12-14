@@ -1,0 +1,34 @@
+{
+"fields":[
+            {
+                "name":"Date",
+                "dataType":"date",
+                "widget":"input"
+            },
+            {
+                "name":"Description",
+                "dataType":"text",
+                "widget":"input"
+            },
+            {
+                "name":"AsignedTo",
+                "dataType":"text",
+                "widget":"input"
+            },
+            {
+                "name":"Priority",
+                "dataType":"number",
+                "widget":"input"
+            },
+            {
+                "name":"status",
+                "dataType":"text",
+                "widget":"input"
+            },
+            {
+                "name":"Submit",
+                "dataType":"",
+                "widget":"button"                
+            }
+        ]
+}

@@ -1,0 +1,41 @@
+<html>
+<body>
+<u><center><b>To Do Form</b></center></u>
+  <table id="content-div">
+    </table>
+    <br/>
+    <table id="table-div" border="1">
+
+    </table>
+	</body>
+	<script type="text/javascript" src="todoform.js"></script>
+<script>
+
+  var httpRequest;
+  
+    httpRequest = new XMLHttpRequest();
+    if (!httpRequest) {
+		
+      alert("No reques");
+    }
+	
+    httpRequest.onreadystatechange = createContents;
+    httpRequest.open('GET', 'pageschema.json');
+    httpRequest.send();
+	
+
+  function createContents() {
+	
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+      if (httpRequest.status === 200) {
+	  //console.log(httpRequest.responseText);
+	  
+		setContentsBy(JSON.parse(httpRequest.responseText),"content-div","table-div");
+        
+      } else {
+        alert('There was a problem with the request.');
+      }
+    }
+  }
+</script>
+</html>
